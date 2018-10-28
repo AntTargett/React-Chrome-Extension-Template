@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "AntsExtension",
+    "description": "Something about Ants",
+    "version": "0.0.1",
+    "author": "Antony Targett",
+    "browser_action": {
+        "default_icon": "images/ant_icon.png",
+        "default_title": "Have a good day",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/ant_icon_16.png",
+        "48": "images/ant_icon_48.png",
+        "128": "images/ant_icon_128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": ["activeTab"],
+    "web_accessible_resources": [
+        "images/*.png",
+        "style/double-rainbow.css",
+        "script/double-rainbow.js",
+        "script/main.js",
+        "templates/*"
+    ]
+}

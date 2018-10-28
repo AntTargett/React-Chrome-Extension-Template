@@ -1,0 +1,51 @@
+{
+    "name": "chrome-extension",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "fix:other": "prettier --write --tab-width 4",
+        "fix:js": "npm run test:js --fix",
+        "fix": "npm run fix:js && npm run  fix:other",
+        "pretty": "prettier --write --tab-width 4 \"command-actions/**/*.js\"",
+        "test:js": "eslint --ignore-path .gitignore --ignore-path \"**/*.{js,jsx}\"",
+        "test": "npm run test:js",
+        "lint-staged": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AntTargett/Chrome-Extension.git"
+    },
+    "author": "Antony Targett",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AntTargett/Chrome-Extension/issues"
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "git add"
+        ],
+        "*.{json,md,scss}": [
+            "prettier --write --tab-width 4",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "npm test"
+        }
+    },
+    "homepage": "https://github.com/AntTargett/Chrome-Extension#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^5.8.0",
+        "webpack": "^4.23.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-prettier": "^2.6.2",
+        "husky": "^1.0.0-rc.13",
+        "lint-staged": "^7.2.0",
+        "prettier": "^1.14.0"
+    }
+}
