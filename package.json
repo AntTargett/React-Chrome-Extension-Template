@@ -1,7 +1,7 @@
 {
     "name": "chrome-extension",
     "version": "0.0.1",
-    "description": "",
+    "description": "Chrome Extension created by Antony",
     "main": "index.js",
     "scripts": {
         "fix:other": "prettier --write --tab-width 4",
@@ -10,7 +10,12 @@
         "pretty": "prettier --write --tab-width 4 \"command-actions/**/*.js\"",
         "test:js": "eslint --ignore-path .gitignore --ignore-path \"**/*.{js,jsx}\"",
         "test": "npm run test:js",
-        "lint-staged": "lint-staged"
+        "lint-staged": "lint-staged",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "export": "npm run build && next export -o src/build",
+        "help": "next export -h"
     },
     "repository": {
         "type": "git",
@@ -38,14 +43,30 @@
         }
     },
     "homepage": "https://github.com/AntTargett/Chrome-Extension#readme",
-    "dependencies": {},
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "next": "^8.0.0",
+        "react": "^16.6.0",
+        "react-dom": "^16.6.0"
+    },
     "devDependencies": {
-        "eslint": "^5.8.0",
-        "webpack": "^4.23.1",
+        "@babel/cli": "^7.1.2",
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "axios": "^0.18.0",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-module-resolver": "^3.1.1",
+        "babel-preset-react": "^6.24.1",
+        "eslint": "^5.15.1",
+        "eslint-config-airbnb": "^17.1.0",
         "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-prettier": "^2.6.2",
+        "eslint-plugin-react": "^7.12.4",
         "husky": "^1.0.0-rc.13",
         "lint-staged": "^7.2.0",
-        "prettier": "^1.14.0"
+        "prettier": "^1.14.0",
+        "webpack": "^4.23.1"
     }
 }
