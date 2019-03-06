@@ -1,4 +1,4 @@
 import React from 'react'
 
-const Test = () => <div>Welcome to TESTING!</div>
+const Test = () => <div>Welcome to AGSIGD!</div>
 export default Test
