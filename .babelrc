@@ -1,4 +1,4 @@
 {
-  "presets": ["next/babel", "react"],
+  "presets": ["next/babel", "@babel/preset-react"],
   "env": { "test": { "presets": ["env", "next/babel"] } }
 }
