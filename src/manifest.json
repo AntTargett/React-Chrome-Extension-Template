@@ -7,7 +7,7 @@
     "browser_action": {
         "default_icon": "images/ant_icon.png",
         "default_title": "GithubTab",
-        "default_popup": "build/popup/index.html"
+        "default_popup": "build/Popup/PopupContainer/index.html"
     },
     "icons": {
         "16": "images/ant_icon_16.png",
@@ -15,7 +15,7 @@
         "128": "images/ant_icon_128.png"
     },
     "chrome_url_overrides": {
-        "newtab": "build/newTab/index.html"
+        "newtab": "build/NewTab/NewTabContainer/index.html"
     },
     "permissions": ["activeTab"],
     "web_accessible_resources": [

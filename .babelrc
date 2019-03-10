@@ -1,5 +1,5 @@
 {
-  "presets": ["flow","next/babel", "@babel/preset-react", "@babel/preset-flow"
+  "presets": ["next/babel", "@babel/preset-react", "@babel/preset-flow"
   ],
   "env": { "test": { "presets": ["env", "next/babel"] } }
 }
