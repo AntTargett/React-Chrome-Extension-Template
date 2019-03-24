@@ -17,6 +17,8 @@
     "chrome_url_overrides": {
         "newtab": "build/NewTab/NewTabContainer/index.html"
     },
+    "content_security_policy": "unsafe-eva 'self' 'unsafe-inline' https://ajax.googleapis.com http://cdnjs.cloudflare.com; object-src 'self'",
+
     "permissions": ["activeTab"],
     "web_accessible_resources": [
         "images/*.png",

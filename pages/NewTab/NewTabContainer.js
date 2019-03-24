@@ -4,6 +4,10 @@ import styled from "@emotion/styled"
 import axios from "axios"
 
 class NewTab extends React.Component {
+    state = {
+        test: 0
+    }
+
     static async getInitialProps() {
         // fetch list of repositories
         const response = await axios.get("https://api.github.com/users/AntTargett/repos", {
@@ -15,6 +19,7 @@ class NewTab extends React.Component {
 
     render() {
         const { data } = this.props
+        const { test } = this.state
         return (
             <div>
                 <title>ImAnAnt Tab</title>
@@ -23,7 +28,8 @@ class NewTab extends React.Component {
                     <Link href={{ pathname: "https://github.com/AntTargett" }}>here</Link>
                     {JSON.stringify(data)}{" "}
                 </div>
-                <Button> TestingEmotionSupport</Button>
+                <Button onClick={() => this.setState({ test: this.sate.test + 1 })}> TestingEmotionSupport</Button>
+                {test}
             </div>
         )
     }
