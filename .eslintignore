@@ -1,2 +1,2 @@
-.next
-./src/build
+./build
+*.test*

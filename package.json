@@ -1,31 +1,20 @@
 {
-    "name": "chrome-extension",
-    "version": "0.0.1",
-    "description": "Chrome Extension created by Antony",
-    "main": "index.js",
+    "name": "my-awesome-extension",
+    "version": "0.1.0",
+    "private": true,
+    "author": "Antony Targett",
+    "license": "MIT",
     "scripts": {
         "fix:other": "prettier --write --tab-width 4",
         "fix:js": "npm run test:js --fix",
         "fix": "npm run fix:js && npm run  fix:other",
         "pretty": "prettier --write --tab-width 4 \"command-actions/**/*.js\"",
-        "test:js": "eslint --ignore-path .gitignore --ignore-path \"**/*.{js,jsx}\"",
-        "test": "npm run test:js",
-        "lint-staged": "lint-staged",
-        "dev": "next",
-        "build": "next build",
-        "start": "next start",
-        "export": "npm run build && next export -o src/build",
-        "help": "next export -h",
-        "flow": "flow"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AntTargett/Chrome-Extension.git"
-    },
-    "author": "Antony Targett",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/AntTargett/Chrome-Extension/issues"
+        "start": "react-scripts start",
+        "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "flow": "flow",
+        "lint-staged": "lint-staged"
     },
     "lint-staged": {
         "*.{js,jsx}": [
@@ -43,36 +32,30 @@
             "pre-push": "npm test"
         }
     },
-    "homepage": "https://github.com/AntTargett/Chrome-Extension#readme",
     "dependencies": {
-        "@babel/polyfill": "^7.0.0",
-        "@emotion/core": "^10.0.7",
-        "@emotion/styled": "^10.0.7",
+        "react": "^16.8.5",
+        "react-dom": "^16.8.5",
+        "react-scripts": "2.1.8",
         "axios": "^0.18.0",
-        "next": "^8.0.0",
-        "react": "^16.6.0",
-        "react-dom": "^16.6.0"
+        "@emotion/core": "^10.0.7",
+        "@emotion/styled": "^10.0.7"
     },
     "devDependencies": {
-        "@babel/cli": "^7.1.2",
-        "@babel/core": "^7.1.2",
-        "@babel/preset-env": "^7.1.0",
-        "@babel/preset-flow": "^7.0.0",
-        "@babel/preset-react": "^7.0.0",
-        "babel-cli": "^6.26.0",
-        "babel-eslint": "^10.0.1",
-        "babel-plugin-module-resolver": "^3.1.1",
-        "eslint": "^5.15.1",
+        "husky": "^1.0.0-rc.13",
+        "lint-staged": "^7.2.0",
+        "prettier": "^1.14.0",
+        "eslint": "5.12.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-config-prettier": "^2.9.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-prettier": "^2.6.2",
-        "eslint-plugin-react": "^7.12.4",
-        "flow-bin": "^0.94.0",
-        "husky": "^1.0.0-rc.13",
-        "lint-staged": "^7.2.0",
-        "prettier": "^1.14.0",
-        "webpack": "^4.23.1"
-    }
+        "eslint-plugin-react": "^7.12.4"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }
