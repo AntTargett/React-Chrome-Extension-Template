@@ -1,9 +1,6 @@
-# YuYo - Chrome Extension for useful information 
+# Chrome Extension template  
 
-### VERY ROUGH WORK IN PROGRESS
-
-#### Aim is to be used personally and for example Typescript/React with hooks 
-
+Basic template showing how to use react with newtab and popup.
 
 ## Tech
 - Typescript
